@@ -18,7 +18,7 @@ module.exports = {
     plugins: [
         '@typescript-eslint'
     ],
-    ignorePatterns: ['lib', 'test-vue-ts'],
+    ignorePatterns: ['dist', 'test-vue-ts'],
     rules: {
         '@typescript-eslint/no-explicit-any': 'warn',
     }

@@ -10,7 +10,7 @@ let config: {
     suffix: string,
 };
 
-export default function myPlugin({
+export default function componentsPlus({
     include = ['index.vue', 'Index.vue'],
     prefix = '',
     suffix = '',
@@ -24,7 +24,7 @@ export default function myPlugin({
         name: 'vite-plugin-components-plus',
         enforce: 'pre',
         transform(code, id) {
-            if (config.include.includes(id)) {
+            if (config.include.find((item:string) => id.endsWith(item))) {
                 const { descriptor } = parse(code);
                 // 获取组件名称
                 componentName = getComponentName(id, descriptor);

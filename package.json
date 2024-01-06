@@ -1,9 +1,10 @@
 {
     "name": "vite-plugin-components-plus",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "一个可以自动重命名index.vue的vite插件，自动给index.vue组件重命名为文件夹的名称，也可手动使用name属性来命名组件",
-    "type": "module",
-    "main": "./lib/index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
     "scripts": {
         "dev": "vite",
         "lint": "eslint . --fix",
@@ -28,16 +29,24 @@
         "husky": "^8.0.3",
         "lint-staged": "^13.2.3",
         "rollup": "^4.1.4",
+        "rollup-plugin-dts": "^6.1.0",
         "rollup-plugin-typescript2": "^0.36.0",
         "typescript": "^5.2.2",
         "vite": "^4.5.1",
-        "vue": "^3.2.5"
+        "vue": "^3.2.30"
+    },
+    "dependencies": {
+        "@babel/core": "^7.23.7",
+        "@babel/types": "^7.23.6"
     },
     "keywords": [
         "vite",
         "vue3",
         "vite-plugin",
         "vite-plugin-components-plus"
+    ],
+    "files": [
+        "dist"
     ],
     "author": "shiouhoo",
     "license": "MIT",
@@ -50,9 +59,5 @@
         "*.{js,ts,vue}": [
             "eslint --fix"
         ]
-    },
-    "dependencies": {
-        "@babel/core": "^7.23.7",
-        "@babel/types": "^7.23.6"
     }
 }
