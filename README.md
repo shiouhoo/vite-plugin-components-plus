@@ -28,11 +28,9 @@ export default defineConfig({
 });
 
 ```
-::: tip
-
-本插件的调用，一定要在vue插件之前
-
-:::
+<blockquote style="color: red; background-color: #ffe6e6; padding: 10px; border-left: 5px solid red;">
+  ⚠️ 注意：本插件的调用，一定要在vue插件之前
+</blockquote>
 
 ### 用法
 
@@ -40,7 +38,7 @@ export default defineConfig({
 
 #### 指定名称
 
-在 vue 文件中，setup 中也可使用 name属性 来为组件命名。
+在 vue 文件中，setup 中也可使用 name属性 来为组件命名。该用法的优先级会小于default导出对象中的name属性
 
 ```vue
 
@@ -50,11 +48,10 @@ import { defineProps } from 'vue';
 </script>
 
 ```
-::: tip
 
-如果你在默认导出对象中显示的指定了组件名称，那么插件将不会对组件名称进行重命名。
-
-:::
+<blockquote style="padding: 10px; border-left: 5px solid #3eaf7c;">
+  ℹ️ 如果你在默认导出对象中显示的指定了组件名称，那么插件将不会对组件名称进行重命名。
+</blockquote>
 
 ### 原理
 
