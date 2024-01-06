@@ -1,0 +1,58 @@
+{
+    "name": "vite-plugin-components-plus",
+    "version": "1.0.0",
+    "description": "一个可以自动重命名index.vue的vite插件，自动给index.vue组件重命名为文件夹的名称，也可手动使用name属性来命名组件",
+    "type": "module",
+    "main": "./lib/index.js",
+    "scripts": {
+        "dev": "vite",
+        "lint": "eslint . --fix",
+        "build": "rollup -c",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@babel/generator": "^7.23.6",
+        "@babel/preset-typescript": "^7.23.3",
+        "@commitlint/cli": "^17.6.7",
+        "@commitlint/config-conventional": "^17.6.7",
+        "@rollup/plugin-commonjs": "^25.0.7",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@shiouhoo/eslint-config": "^1.0.10",
+        "@types/node": "^20.8.7",
+        "@typescript-eslint/eslint-plugin": "^6.8.0",
+        "@typescript-eslint/parser": "^6.8.0",
+        "@vitejs/plugin-vue": "^5.0.2",
+        "commitizen": "^4.3.0",
+        "cz-git": "^1.7.0",
+        "eslint": "^8.52.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.3",
+        "rollup": "^4.1.4",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "typescript": "^5.2.2",
+        "vite": "^4.5.1",
+        "vue": "^3.2.5"
+    },
+    "keywords": [
+        "vite",
+        "vue3",
+        "vite-plugin",
+        "vite-plugin-components-plus"
+    ],
+    "author": "shiouhoo",
+    "license": "MIT",
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-git"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts,vue}": [
+            "eslint --fix"
+        ]
+    },
+    "dependencies": {
+        "@babel/core": "^7.23.7",
+        "@babel/types": "^7.23.6"
+    }
+}
