@@ -16,13 +16,13 @@ pnpm i vite-plugin-components-plus -D
 ```js
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import componentsPlus from 'vite-plugin-components-plus';
+import { componentsRename } from 'vite-plugin-components-plus';
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         // 参数请看最后的说明
-        componentsPlus(),
+        componentsRename(),
         vue()
     ],
 });
